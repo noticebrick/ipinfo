@@ -18,6 +18,10 @@ app.get('/', async c => {
   return c.html(<Page ip={ip} city={city} country={country} ua={ua} ipinfo={IP_INFO} />)
 })
 
+app.get('/ip', c => {
+  return c.text(c.req.header('cf-connecting-ip')!)
+})
+
 app.get('/json', async c => {
   const ip = c.req.header('cf-connecting-ip')
 
