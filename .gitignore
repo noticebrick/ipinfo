@@ -1,0 +1,7 @@
+.wrangler/
+node_modules/
+
+.DS_Store
+bun.lock
+worker-configuration.d.ts
+wrangler.jsonc
