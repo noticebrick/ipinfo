@@ -18,4 +18,15 @@ app.get('/', async c => {
   return c.html(<Page ip={ip} city={city} country={country} ua={ua} ipinfo={IP_INFO} />)
 })
 
+app.get('/json', async c => {
+  const ip = c.req.header('cf-connecting-ip')
+
+  const region = c.req.header('cf-region')
+  const city = c.req.header('cf-ipcity')
+  const country = c.req.header('cf-ipcountry')
+  const timezone = c.req.header('cf-timezone')
+
+  return c.json({ ip, region, city, country, timezone })
+})
+
 export default app
