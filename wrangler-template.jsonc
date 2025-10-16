@@ -6,9 +6,6 @@
   "observability": {
     "enabled": true
   },
-  "assets": {
-    "directory": "./public",
-  },
   "routes": [
     {
       "pattern": "example.com",

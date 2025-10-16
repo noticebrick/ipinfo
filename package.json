@@ -1,7 +1,7 @@
 {
   "name": "ipinfo",
   "description": "A simple IP information service.",
-	"version": "1.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
@@ -10,11 +10,11 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "hono": "^4.9.8",
-    "ua-parser-js": "^2.0.5"
+    "hono": "^4.9.12",
+    "ua-parser-js": "^2.0.6"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
-    "wrangler": "^4.40.2"
+    "wrangler": "^4.43.0"
   }
 }

@@ -45,7 +45,6 @@ export const Page: FC<PageProps> = ({ ip, city, country, ua, ipinfo }) => {
         <meta property="og:title" content="IP Info" />
         <meta property="og:description" content="Check your IP address and related information." />
         <meta property="og:type" content="website" />
-        <link rel="stylesheet" href="/style.css" />
       </head>
       <body>
         <div className="wrapper">
@@ -54,6 +53,59 @@ export const Page: FC<PageProps> = ({ ip, city, country, ua, ipinfo }) => {
           {providerLine && <h2>{providerLine}</h2>}
           {uaLine && <h2>{uaLine}</h2>}
         </div>
+        <style jsx global>{`
+          body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100dvh;
+            margin: 0;
+            padding: 2rem;
+            font-family: system-ui, Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            line-height: 1.4;
+            text-align: center;
+            box-sizing: border-box;
+          }
+
+          .wrapper {
+            max-width: 1000px;
+            width: 100%;
+          }
+
+          h1,
+          h2 {
+            margin: 0.4rem 0;
+            font-weight: 500;
+          }
+
+          h1 {
+            font-size: clamp(2rem, 3.5vw + 0.5rem, 3.2rem);
+          }
+
+          h2 {
+            font-size: clamp(1.1rem, 1.2vw + 0.8rem, 1.7rem);
+            opacity: 0.9;
+            font-weight: 400;
+          }
+
+          @media (min-width: 1200px) {
+            h1 {
+              font-weight: 600;
+            }
+          }
+
+          @media (max-width: 600px) {
+            h1 {
+              font-size: 1.75rem;
+            }
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        `}</style>
       </body>
     </html>
   )
