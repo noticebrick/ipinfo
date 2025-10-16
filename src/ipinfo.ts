@@ -13,6 +13,7 @@ export interface IPInfoResponse {
 
 export default async function ipinfo(ip: string): Promise<IPInfoResponse | undefined> {
   try {
+    if (!env.IPINFO_TOKEN) return undefined
     const res = await fetch(`https://api.ipinfo.io/lite/${ip}`, {
       headers: {
         Authorization: `Bearer ${env.IPINFO_TOKEN}`
